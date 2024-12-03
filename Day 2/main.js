@@ -77,7 +77,6 @@ function isSafe2(list)
     {
         if(reEvaluate(list, i)) return true;
     }
-
     return false;
 }
 
