@@ -15,7 +15,7 @@ const input = fs.readFileSync("./input.txt", "utf-8");
 
 function parseInstructions(instructions)
 {
-    const regex = /((mul\(\d{1,3},\s*\d{1,3}\)))/g;
+    const regex = /((mul\(\d{1,3},\d{1,3}\)))/g;
     const parsed = instructions.match(regex)
 
     let sum = 0;
@@ -61,9 +61,9 @@ console.log(parseInstructions(input));
  */
 
 
-function parseInstructions2(instructions)
+function parseInstructionsPart2(instructions)
 {
-    const regex = /((?:do\(\)|don't\(\)|mul\(\d{1,3},\s*\d{1,3}\)))/g;
+    const regex = /((?:do\(\)|don't\(\)|mul\(\d{1,3},\d{1,3}\)))/g;
 
     const parsed = instructions.match(regex);
 
@@ -93,4 +93,4 @@ function parseInstructions2(instructions)
     return sum;
 }
 
-console.log(parseInstructions2(input));
+console.log(parseInstructionsPart2(input));
